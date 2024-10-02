@@ -12,6 +12,7 @@
 }
 
 body, section, div, header, footer, main, aside, nav, blockquote, p, span {
+    background-color: var(--color-dark);
     margin: 0;
     padding: 0;
 }
@@ -24,6 +25,51 @@ body {
     font-size: 16px;
 }
 
+.hero {
+    height: 876px;
+    /* background: rgb(99,102,241); */
+    background: linear-gradient(0deg, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 42%, rgba(241, 244, 253, 0.07) 83%);
+    /* display: flex;
+    justify-content: center;
+     */
+     margin: auto;
+    .iphone-1 {
+        height: 813px;
+    }
+
+    .hero-wrapper {
+        display: flex;
+        width: 1296px;
+        margin: auto;
+        background-color: transparent;
+    }
+
+    .hero-content {
+        width: 526px;
+    }
+
+    .hero-iphones {
+        width: 746px;
+        height: 936px;
+        border: 1px dashed white;
+        background-color: transparent;
+        position: relative;
+        img:nth-child(2) {
+            position: absolute;
+            right: 0;
+        }
+        img:nth-child(1) {
+            position: absolute;
+            bottom: -.7rem;
+            left: 7rem;
+        }
+    }
+}
+
+.app-features {
+    height: 800px;
+}
+
 a {
     color: var(--color-primary);
     text-decoration: none;
@@ -33,3 +79,4 @@ a:hover {
     color: var(--color-primary);
     text-decoration: underline;
 }
+
