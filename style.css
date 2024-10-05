@@ -12,9 +12,13 @@
 }
 
 body, section, div, header, footer, main, aside, nav, blockquote, p, span {
-    background-color: var(--color-dark);
+    /* background-color: var(--color-dark); */
     margin: 0;
     padding: 0;
+}
+
+main {
+    background-color: var(--color-dark);
 }
 
 body {
@@ -32,26 +36,54 @@ body {
     /* display: flex;
     justify-content: center;
      */
-     margin: auto;
-    .iphone-1 {
-        height: 813px;
-    }
+    overflow: hidden;
+    margin: auto;
+    /* .iphone-1 {
+        height: 936px;
+    } */
 
     .hero-wrapper {
         display: flex;
+        justify-content: space-between;
         width: 1296px;
-        margin: auto;
+        margin: 188px auto;
         background-color: transparent;
     }
 
     .hero-content {
         width: 526px;
+        margin-top: 40px;
+        background-color: transparent;
+        h1 {
+            margin: 0;
+            font-size: 56px;
+            color: var(--color-white);
+            font-weight: 800;
+            line-height: 130%;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 160%;
+            color: var(--color-white);
+            opacity: 0.7;
+            margin-top: 1.4rem;
+            font-weight: 200;
+            letter-spacing: 0.3px;
+        }
+    }
+
+    .app-buttons {
+        margin-top: 48px;
+        img {
+            margin-right: 22px;
+        }
     }
 
     .hero-iphones {
         width: 746px;
         height: 936px;
-        border: 1px dashed white;
+        /* border: 1px dashed white; */
         background-color: transparent;
         position: relative;
         img:nth-child(2) {
@@ -60,7 +92,7 @@ body {
         }
         img:nth-child(1) {
             position: absolute;
-            bottom: -.7rem;
+            bottom: -.1rem;
             left: 7rem;
         }
     }
