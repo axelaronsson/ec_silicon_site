@@ -22,7 +22,7 @@ main {
     background-color: var(--color-dark);
 }
 
-body {
+body, input {
     font-family: "Manrope", system-ui;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -34,8 +34,6 @@ body {
     width: 44px;
     height: 44px;
     border-radius: 100%;
-    /* opacity: 0.04;
-    background-color: var(--color-white); */
     background-color: rgb(255 255 255 / 4%);
 }
 
@@ -46,9 +44,13 @@ body {
     align-items: center;
     width: 44px;
     height: 44px;
+    border-radius: 100%;
     font-size: 12px;
     color: white;
     cursor: pointer;
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.04);
+    }
 }
 
 header {
@@ -66,41 +68,49 @@ header {
             display: flex;
             flex-direction: row;
             align-items: center;
+        }
 
-            a {
-                margin-left: 48px;
-                font-size: 16px;
-                line-height: 160%;
-                font-weight: 400;
-                letter-spacing: .3px;
-                color: var(--color-white);
-                opacity: 0.85;
-            }
+        a {
+            margin-left: 48px;
+            font-size: 16px;
+            line-height: 160%;
+            font-weight: 400;
+            letter-spacing: .3px;
+            color: var(--color-white);
+            opacity: 0.85;
+        }
 
-            p {
-                font-size: 16px;
-                line-height: 160%;
-                font-weight: 600;
-                color: var(--color-gray-700);
-                margin-right: 16px;
-            }
+        p {
+            font-size: 16px;
+            line-height: 160%;
+            font-weight: 600;
+            color: var(--color-gray-700);
+            margin-right: 16px;
+        }
 
-            .user {
-                margin-bottom: -2px;
-                margin-right: 5px;
-            }
+        .user {
+            margin-bottom: -2px;
+            margin-right: 5px;
+        }
 
-            button {
-                height: 36px;
-                width: 140px;
-                border-radius: 4px;
-                background-color: var(--color-primary);
-                border: none;
-                color: var(--color-white);
-                margin-left: 34px;
-                font-size: 14px;
-                letter-spacing: .3px;
-            }
+        button {
+            height: 36px;
+            width: 140px;
+            border-radius: 4px;
+            background-color: var(--color-primary);
+            border: none;
+            color: var(--color-white);
+            margin-left: 34px;
+            font-size: 14px;
+            letter-spacing: .3px;
+        }
+
+        button:hover {
+            cursor: pointer;
+            background-color: hsl(239, 84%, 70%);
+        }
+        button:active {
+            background-color: hsl(239, 84%, 65%);
         }
 
     }
@@ -153,7 +163,6 @@ header {
         transform: translateX(22px);
       }
 
-      /* Rounded sliders */
       .slider.round {
         border-radius: 34px;
       }
@@ -166,16 +175,11 @@ header {
 .hero {
     padding-top: 188px;
     height: 876px;
-    /* background: rgb(99,102,241); */
     background: linear-gradient(0deg, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 42%, rgba(241, 244, 253, 0.07) 83%);
-    /* display: flex;
-    justify-content: center;
-     */
     overflow: hidden;
     margin: auto;
 
     .hero-wrapper {
-        /* display: flex; */
         overflow: hidden;
         height: 100%;
         justify-content: space-between;
@@ -215,6 +219,7 @@ header {
 
     .app-buttons {
         margin-top: 48px;
+        cursor: pointer;
         img {
             margin-right: 22px;
         }
@@ -223,7 +228,6 @@ header {
     }
 
     .discover {
-        /* height: 44px; */
         width: 152px;
         display: flex;
         align-items: center;
@@ -236,29 +240,12 @@ header {
             line-height: 160%;
             letter-spacing: .3px;
         }
-        /* .caret-btn {
-            width: 44px;
-            height: 44px;
-            border-radius: 100%;
-            opacity: 0.04;
-            background-color: var(--color-white);
-        } */
-        /* .chevron-down {
-            position: absolute;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 44px;
-            height: 44px;
-            font-size: 12px;
-            color: white;
-        } */
+
     }
 
     .hero-iphones {
         width: 746px;
         height: 936px;
-        /* border: 1px dashed white; */
         background-color: transparent;
         position: absolute;
         right: 0;
@@ -275,9 +262,6 @@ header {
     }
 }
 
-/* .app-features {
-    height: 800px;
-} */
 
 a {
     color: var(--color-primary);
@@ -352,20 +336,20 @@ a:hover {
             width: 318px;
             margin-left: 24px;
             padding-right: 50px;
-            
-            h5 {
-                margin: 0px 0px 12px 0px;
-                font-size: 20px;
-                line-height: 140%;
-                color: var(--color-white);
-            }
+        }
 
-            p {
-                font-size: 16px;
-                line-height: 160%;
-                color: var(--color-white);
-                opacity: 0.7;
-            }
+        h5 {
+            margin: 0px 0px 12px 0px;
+            font-size: 20px;
+            line-height: 140%;
+            color: var(--color-white);
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 160%;
+            color: var(--color-white);
+            opacity: 0.7;
         }
         img {
             height: 28px;
@@ -425,23 +409,17 @@ a:hover {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        /* padding-bottom: 112px; */
     }
 
     .bank-content {
         display: flex;
-        /* border: 1px dashed white; */
     }
 
     .inner-box {
         flex: 1;
         height: 500px;
-        /* border: 1px dashed white; */
         position: relative;
         color: var(--color-white);
-        /* &.two {
-            height: 500px;
-        } */
          ul {
             list-style: none;
             color: var(--color-primary);
@@ -479,11 +457,19 @@ a:hover {
             font-size: 14px;
             color: var(--color-white);
             letter-spacing: .3px;
-
-            ::before {
-                padding-left: 8px;
-            }
         }
+        button ::before {
+            padding-left: 8px;
+        }
+
+        button:hover {
+            cursor: pointer;
+            background-color: hsl(239, 84%, 70%);
+        }
+        button:active {
+            background-color: hsl(239, 84%, 65%);
+        }
+
         &.one {
             display: flex;
             flex-direction: column;
@@ -501,39 +487,39 @@ a:hover {
             right: 26px;
         }
 
-        &.four {
-            margin-left: 24px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-
-            h2 {
-                margin-bottom: 40px;
-            }
-
-            p {
-                margin-left: 0;
-                letter-spacing: .2px;
-                margin-bottom: 30px;
-            }
-        }
-
         .bank-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 0px 38px;
-            > div {
-                height: 60px;
-                width: 60px;
-                background-color: rgb(99 102 241 / 8%);
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border-radius: 8px;
-                margin-bottom: 1rem;
-            }
+        }
+        .bank-grid > div {
+            height: 60px;
+            width: 60px;
+            background-color: rgb(99 102 241 / 8%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;
+            margin-bottom: 1rem;
         }
 
+    }
+
+    .inner-box.four {
+        margin-left: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h2 {
+            margin-bottom: 40px;
+        }
+
+        p {
+            margin-left: 0;
+            letter-spacing: .2px;
+            margin-bottom: 30px;
+        }
     }
 }
 
@@ -553,7 +539,6 @@ a:hover {
     > div {
         width: 416px;
         height: 100%;
-        /* border: 1px dashed white; */
     }
 
     h2 {
@@ -592,15 +577,6 @@ a:hover {
 
         .quote img {
             margin: 0;
-        }
-
-        .quote::before {
-            /* content: '';
-            position: absolute;
-            width: 8px;
-            height: 8px;
-            color: black;
-            z-index: 9; */
         }
 
         img {
@@ -651,6 +627,7 @@ a:hover {
 
     a {
         color: var(--color-white);
+        cursor: pointer;
     }
 
     p {
@@ -681,10 +658,17 @@ a:hover {
             line-height: 160%;
             margin-top: 1.2rem;
             letter-spacing: .8px;
+            cursor: pointer;
         }
 
         button ::before {
-            padding-left: 10px;
+            padding-left: 7px;
+            transition: all 0.2s;
+        }
+
+        button:hover ::before {
+            padding-left: 12px;
+            transition: all 0.2s;
         }
 
         > div {
@@ -716,7 +700,6 @@ a:hover {
     }
 
     > div {
-        /* display: flex; */
         flex: 1;
     }
 
@@ -760,8 +743,6 @@ a:hover {
             height: 180px;
             border: 1px solid rgba(255, 255, 255, 0.15);
         }
-        /* display: flex;
-        flex-direction: column; */
     }
 }
 
@@ -772,27 +753,41 @@ a:hover {
     width: 1296px;
     height: 222px;
     margin: 112px auto 0px;
-    padding: 0px 112px;
+    padding: 0px 110px;
     border-radius: 8px;
     background-color: rgba(255, 255, 255, 0.041);
     color: var(--color-white);
 
     h2 {
-        padding-left: 40px;
+        padding-left: 2rem;
+        line-height: 140%;
+        letter-spacing: .2px;
     }
 
     > div {
-        flex: 1;
         display: flex;
+    }
+
+    .subscribe-content {
+        flex: 1.2
+    }
+
+    .subscribe-input {
+        flex: 0.8;
     }
 
     input {
         background: url(/assets/bx-envelope.svg) no-repeat;
         background-position-y: center;
-        background-position-x: 10px;
+        background-position-x: 1rem;
+        background-color: rgba(255, 255, 255, 2%);
         width: 332px;
         margin-left: 70px;
+        padding-left: 46px;
         height: 52px;
+        font-size: 16px;
+        line-height: 16%;
+        color: rgba(255, 255, 255, 40%);
         border: 1px solid rgba(255, 255, 255, 0.18);
         border-right: none;
         border-radius: 8px 0px 0px 8px;
@@ -803,5 +798,29 @@ a:hover {
         background-color: var(--color-primary);
         border: none;
         border-radius: 0px 8px 8px 0px;
+        font-size: 16px;
+        line-height: 160%;
+        letter-spacing: .7px;
+        color: var(--color-white);
+        cursor: pointer;
+
+        &:hover {
+            background-color: hsl(239, 84%, 70%);
+        }
+        &:active {
+            background-color: hsl(239, 84%, 65%);
+        }
     }
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 129px;
+    font-size: 14px;
+    font-weight: 200;
+    letter-spacing: .3px;
+    background-color: var(--color-dark);
+    color: rgba(255, 255, 255, 50%);
 }
